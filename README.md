@@ -23,14 +23,12 @@ Every Saturday, we gather in Kansas City to provide:
 
 We partner with local churches, ministries, volunteers, and community organizations to meet both physical and spiritual needs while treating every person with dignity, respect, and Christ's love.
 
-## About This Repository
 
-This repository contains the source code for the official United In Grace Ministries website, built with:
+## Get Involved
 
-- HTML5
-- CSS3
-- JavaScript
-- GitHub Pages
+We welcome volunteers, church partners, and community organizations who share our passion for serving our neighbors with compassion and the love of Jesus Christ.
+
+Whether you'd like to volunteer, donate supplies, pray, or partner with us, we'd love to connect with you.
 
 ## Planned Website
 
