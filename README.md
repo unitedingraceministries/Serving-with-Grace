@@ -1,24 +1,57 @@
-United In Grace Ministries is a Christ-centered nonprofit serving individuals experiencing homelessness in the Kansas City, Missouri area. Every Saturday, we gather to share a hot breakfast, fresh coffee, fellowship, and the hope found in Jesus Christ. Through worship, prayer, and partnerships with local churches and community organizations, we connect our neighbors with essential resources such as hygiene kits, bottled water, food, clothing, and other support. Our mission is to serve every person with compassion, dignity, and God's love while building relationships that inspire hope and lasting transformation.
-UnitedInGraceMinistries/
-├── index.html
-├── about.html
-├── programs.html
-├── volunteer.html
-├── donate.html
-├── contact.html
-├── prayer.html
-├── events.html
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── script.js
-│
-├── images/
-│   ├── logo.png
-│   ├── hero.jpg
-│   ├── outreach/
-│   └── gallery/
-│
-└── README.md
+# United In Grace Ministries
+
+**Serving with Grace. Sharing Hope. Living the Gospel.**
+
+Welcome to the official website repository for **United In Grace Ministries**, a Christ-centered nonprofit serving individuals experiencing homelessness in the Kansas City, Missouri area.
+
+## Our Mission
+
+Our mission is to demonstrate the love of Jesus Christ by serving people experiencing homelessness through compassion, practical support, meaningful relationships, and the hope of the Gospel.
+
+## What We Do
+
+Every Saturday, we gather in Kansas City to provide:
+
+- ☕ Fresh coffee
+- 🍳 Hot breakfast
+- 🙏 Prayer
+- 🎵 Worship
+- ❤️ Fellowship
+- 🧴 Hygiene kits
+- 💧 Bottled water
+- 🍎 Food and other essential resources
+
+We partner with local churches, ministries, volunteers, and community organizations to meet both physical and spiritual needs while treating every person with dignity, respect, and Christ's love.
+
+## About This Repository
+
+This repository contains the source code for the official United In Grace Ministries website, built with:
+
+- HTML5
+- CSS3
+- JavaScript
+- GitHub Pages
+
+## Planned Website
+
+- Home
+- About Us
+- Our Mission
+- Programs
+- Volunteer
+- Donate
+- Events
+- Prayer Requests
+- Contact
+
+## Contributing
+
+We welcome ideas and contributions that help improve our website and better serve our community.
+
+## Contact
+
+If you'd like to volunteer, partner with us, or learn more about our ministry, please visit our website once it's published.
+
+---
+
+*"Whatever you did for one of the least of these brothers and sisters of mine, you did for me."* — Matthew 25:40
