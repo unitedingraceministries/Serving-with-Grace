@@ -1,6 +1,6 @@
 # United In Grace Ministries
 
-**Serving with Grace. Sharing Hope. Living the Gospel.**
+**Together, we are United in Grace Serving God, serving people **
 
 Welcome to the official website repository for **United In Grace Ministries**, a Christ-centered nonprofit serving individuals experiencing homelessness in the Kansas City, Missouri area.
 
