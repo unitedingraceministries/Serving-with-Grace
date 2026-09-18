@@ -552,5 +552,18 @@ a:hover{
     box-shadow:0 15px 35px rgba(0,0,0,.3);
 
 }
+.section-subtitle{
+
+    text-align:center;
+
+    color:#D4AF37;
+
+    font-size:1.3rem;
+
+    margin-bottom:25px;
+
+    font-weight:bold;
+
+}
 
 /* ---------- END OF FILE ---------- */
