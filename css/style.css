@@ -5,21 +5,7 @@
 ====================================================== */
 
 /* ---------- RESET ---------- */
-.button{
-    display:inline-block;
-    background:#C88B19;
-    color:white;
-    padding:14px 34px;
-    border-radius:40px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-}
 
-.button:hover{
-    background:#9C151A;
-    transform:translateY(-3px);
-}
 *{
     margin:0;
     padding:0;
@@ -133,19 +119,19 @@ nav a:hover{
 
 .button{
     display:inline-block;
-    background:#D4AF37;
-    color:#0B2545;
-    text-decoration:none;
-    padding:14px 32px;
+    background:#C88B19;
+    color:white;
+    padding:14px 34px;
     border-radius:40px;
+    text-decoration:none;
     font-weight:bold;
     transition:.3s;
 }
 
 .button:hover{
-    background:white;
+    background:#9C151A;
     transform:translateY(-3px);
-}
+}}
 /* ======================================================
    STYLE.CSS - PART 2
    Sections • Cards • Gallery • Scripture
@@ -170,9 +156,59 @@ section h2{
     text-align:center;
     font-size:1.1rem;
 }
+section{
+    padding:70px 20px;
+}
+.card{
 
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 35px rgba(0,0,0,.18);
+
+}
+.hero-image img{
+    width:100%;
+    height:550px;
+    object-fit:cover;
+    display:block;
+}
+@media (max-width:768px){
+
+.hero-image img{
+    height:280px;
+}
+footer{
+
+background:#1B1B1B;
+
+color:white;
+
+}
+   .logo{
+
+filter:drop-shadow(0 0 18px rgba(255,255,255,.35));
+
+}
 /* ---------- DARK SECTION ---------- */
+.gallery-grid img{
 
+transition:.35s;
+
+border-radius:12px;
+
+}
+
+.gallery-grid img:hover{
+
+transform:scale(1.05);
+
+}
 .dark-section{
     background:#0B2545;
     color:white;
