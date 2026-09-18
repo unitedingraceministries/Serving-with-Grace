@@ -368,3 +368,214 @@ section h2{
     background:#f3ecee;
 
 }
+/* ================= SCRIPTURE ================= */
+
+.scripture{
+
+    background:#7A1E2C;
+
+    color:white;
+
+    text-align:center;
+
+    padding:90px 20px;
+
+}
+
+.scripture blockquote{
+
+    font-size:1.6rem;
+
+    font-style:italic;
+
+    max-width:900px;
+
+    margin:0 auto 25px;
+
+    line-height:1.8;
+
+}
+
+.scripture h3{
+
+    color:#D4AF37;
+
+    font-size:1.4rem;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    background:#081C33;
+
+    color:white;
+
+    text-align:center;
+
+    padding:50px 20px;
+
+}
+
+footer h2{
+
+    color:white;
+
+    margin-bottom:15px;
+
+}
+
+footer hr{
+
+    width:120px;
+
+    margin:25px auto;
+
+    border:2px solid #D4AF37;
+
+}
+
+footer p{
+
+    margin:12px 0;
+
+}
+
+footer strong{
+
+    color:#D4AF37;
+
+}
+
+/* ================= LINKS ================= */
+
+a{
+
+    transition:.3s;
+
+}
+
+a:hover{
+
+    opacity:.9;
+
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eeeeee;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#7A1E2C;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#5d1722;
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:900px){
+
+    header h1{
+
+        font-size:2.3rem;
+
+    }
+
+    .hero h2{
+
+        font-size:2.3rem;
+
+    }
+
+    .hero p{
+
+        font-size:1.1rem;
+
+    }
+
+    nav{
+
+        flex-direction:column;
+
+        gap:10px;
+
+    }
+
+    nav a{
+
+        display:block;
+
+        width:220px;
+
+        margin:auto;
+
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    section h2{
+
+        font-size:2rem;
+
+    }
+
+}
+
+/* ================= FADE-IN ANIMATION ================= */
+
+.card,
+.photo-placeholder,
+.button{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
