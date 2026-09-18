@@ -127,7 +127,29 @@ nav a:hover{
 
 .hero{
 
-    min-height:90vh;
+    height:550px;
+
+    background:
+    linear-gradient(rgba(11,37,69,.55), rgba(122,30,44,.55)),
+    url("../images/1000002697_1789226324847.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    text-align:center;
+
+}
 
     background:
 linear-gradient(rgba(11,37,69,.65), rgba(122,30,44,.65)),
