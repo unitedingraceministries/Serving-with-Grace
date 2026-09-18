@@ -1,101 +1,217 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ==========================================
+   UNITED IN GRACE MINISTRIES
+   Main Stylesheet
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    background: #f8f9fa;
-    color: #333;
+html{
+    scroll-behavior:smooth;
 }
 
-header {
-    background: #0d47a1;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#f4f4f4;
+
+    color:#333;
+
+    line-height:1.8;
+
 }
 
-header h1 {
-    font-size: 3rem;
+/* ================= CONTAINER ================= */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
 }
 
-header p {
-    margin-top: 10px;
-    font-size: 1.2rem;
+/* ================= HEADER ================= */
+
+header{
+
+    background:#0B2545;
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.25);
+
 }
 
-nav {
-    margin-top: 25px;
+header h1{
+
+    font-size:3rem;
+
+    margin-bottom:10px;
+
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+.tagline{
+
+    color:#dddddd;
+
+    margin-bottom:25px;
+
+    font-size:1.15rem;
+
 }
 
-nav a:hover {
-    color: gold;
+/* ================= NAVIGATION ================= */
+
+nav{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
 }
 
-.hero {
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
-                url("../images/hero.jpg");
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 120px 20px;
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 20px;
+
+    border-radius:30px;
+
+    transition:.35s;
+
+    font-weight:bold;
+
 }
 
-.hero h2 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
+nav a:hover{
+
+    background:#7A1E2C;
+
 }
 
-.hero p {
-    max-width: 700px;
-    margin: auto;
-    font-size: 1.2rem;
+/* ================= HERO ================= */
+
+.hero{
+
+    min-height:90vh;
+
+    background:linear-gradient(rgba(11,37,69,.75),rgba(122,30,44,.80)),
+    url("../images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
+
 }
 
-.button {
-    display: inline-block;
-    margin-top: 30px;
-    background: gold;
-    color: #0d47a1;
-    padding: 15px 35px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
+.overlay{
+
+    width:100%;
+
+    padding:100px 20px;
+
 }
 
-.button:hover {
-    background: white;
+.hero h2{
+
+    font-size:3.5rem;
+
+    margin-bottom:30px;
+
 }
 
-section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 60px 20px;
+.hero p{
+
+    font-size:1.3rem;
+
+    max-width:850px;
+
+    margin:auto;
+
 }
 
-section h2 {
-    color: #0d47a1;
-    margin-bottom: 20px;
+/* ================= BUTTONS ================= */
+
+.hero-buttons{
+
+    margin-top:40px;
+
 }
 
-ul {
-    margin-left: 25px;
+.button{
+
+    display:inline-block;
+
+    background:#D4AF37;
+
+    color:#0B2545;
+
+    padding:15px 35px;
+
+    margin:10px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.35s;
+
 }
 
-footer {
-    background: #0d47a1;
-    color: white;
-    text-align: center;
-    padding: 30px;
+.button:hover{
+
+    background:white;
+
+    transform:translateY(-5px);
+
+}
+
+.secondary{
+
+    background:#7A1E2C;
+
+    color:white;
+
+}
+
+.secondary:hover{
+
+    background:#8f2637;
+
 }
