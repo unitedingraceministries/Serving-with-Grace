@@ -654,4 +654,58 @@ a:hover{
     transform:scale(1.05);
     box-shadow:0 15px 35px rgba(0,0,0,.35);
 }
+/* ================= QUICK LINKS ================= */
+
+.quick-links{
+    background:#f8f9fa;
+    padding:60px 20px;
+}
+
+.quick-links .container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.quick-card{
+    background:#ffffff;
+    text-decoration:none;
+    color:#333;
+    text-align:center;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+    transition:all .35s ease;
+}
+
+.quick-card span{
+    display:block;
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.quick-card h3{
+    margin:10px 0;
+    color:#0B2545;
+}
+
+.quick-card p{
+    color:#666;
+    font-size:.95rem;
+}
+
+.quick-card:hover{
+    transform:translateY(-8px);
+    background:#0B2545;
+    color:#fff;
+    box-shadow:0 15px 30px rgba(0,0,0,.20);
+}
+
+.quick-card:hover h3{
+    color:#D4AF37;
+}
+
+.quick-card:hover p{
+    color:#fff;
+}
 /* ---------- END OF FILE ---------- */
