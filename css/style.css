@@ -222,7 +222,15 @@ section h2{
 .gallery-grid img{
     width:100%;
     height:260px;
-    object-fit:cover;
+.hero-image img{
+    width:100%;
+    max-height:350px;
+    object-fit:contain;
+    display:block;
+    margin:auto;
+    background:#0B2545;
+}
+}
     border-radius:15px;
     box-shadow:0 8px 20px rgba(0,0,0,.15);
     transition:.3s;
@@ -476,15 +484,15 @@ a:hover{
 
     width:100%;
 
-    max-height:300px;
+    height:auto;
 
-    height:300px;
+    max-height:none;
 
-    object-fit:cover;
-
-    object-position:center top;
+    object-fit:contain;
 
     display:block;
+
+}
 
 }
 
