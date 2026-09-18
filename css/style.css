@@ -519,5 +519,30 @@ a:hover{
     font-size:1.15rem;
 
 }
+\/* ================= GALLERY IMPROVEMENTS ================= */
+
+.gallery-grid img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    transition:.35s;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+
+}
 
 /* ---------- END OF FILE ---------- */
