@@ -2,7 +2,14 @@
    UNITED IN GRACE MINISTRIES
    Main Stylesheet
 ========================================== */
+/* ================= LOGO ================= */
 
+.logo{
+    width:140px;
+    height:auto;
+    display:block;
+    margin:0 auto 20px;
+}
 *{
     margin:0;
     padding:0;
