@@ -656,7 +656,9 @@ a:hover{
     box-shadow:0 15px 35px rgba(0,0,0,.35);
 }
 /* ================= QUICK LINKS ================= */
-
+header{
+    background:linear-gradient(90deg,#5B1320,#7A1C24,#123B73);
+}
 .quick-links{
     background:#f8f9fa;
     padding:60px 20px;
