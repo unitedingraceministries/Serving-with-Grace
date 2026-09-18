@@ -127,7 +127,7 @@ nav a:hover{
 
 .hero{
 
-    height:550px;
+    height:220px;
 
     background:
     linear-gradient(rgba(11,37,69,.55), rgba(122,30,44,.55)),
@@ -188,8 +188,9 @@ url("../images/1000002697_1789226324847.jpg");
 }
 
 .hero p{
-
-    font-size:1.3rem;
+    font-size:1rem;
+    max-width:700px;
+}
 
     max-width:850px;
 
