@@ -84,7 +84,7 @@ nav a:hover{
 /* ---------- HERO ---------- */
 
 .hero{
-    height:320px;
+    height:180px;
     background:
         linear-gradient(rgba(11,37,69,.60), rgba(122,30,44,.60)),
         url("../images/1000002697_1789226324847.jpg");
