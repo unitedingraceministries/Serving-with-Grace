@@ -718,4 +718,14 @@ a:hover{
     margin-top: 25px;
 }
 }
+#location iframe {
+    width: 100%;
+    max-width: 1000px;
+    height: 450px;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    display: block;
+    margin: 40px auto 0;
+}
 /* ---------- END OF FILE ---------- */
