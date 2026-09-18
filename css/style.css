@@ -707,5 +707,15 @@ a:hover{
 
 .quick-card:hover p{
     color:#fff;
+   /* ================= GOOGLE MAP ================= */
+
+#location iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-top: 25px;
+}
 }
 /* ---------- END OF FILE ---------- */
