@@ -205,7 +205,18 @@ section h2{
 .card p{
     color:#555;
 }
+<div class="card">
 
+    <span>🤲</span>
+
+    <h3>Encouragement</h3>
+
+    <p>
+        Offering friendship, encouragement, and a listening ear so every person
+        knows they are seen, valued, and loved by God.
+    </p>
+
+</div>
 /* ---------- PHOTO GALLERY ---------- */
 
 .gallery{
