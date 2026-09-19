@@ -899,3 +899,34 @@ padding:50px 20px;
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0,0,0,.18);
 }
+.gallery-grid img {
+    border-radius: 15px;
+}
+.gallery-grid img {
+    transition: .3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #D8B24C;
+    margin: 15px auto 0;
+    border-radius: 50px;
+}
+.button:hover {
+    transform: scale(1.05);
+}
+iframe {
+    border-radius: 20px;
+}
+.logo {
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,.3));
+}
+.logo {
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,.3));
+}
