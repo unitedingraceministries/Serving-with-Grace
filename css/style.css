@@ -891,3 +891,11 @@ padding:50px 20px;
     }
 
 }
+.card {
+    transition: all .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.18);
+}
