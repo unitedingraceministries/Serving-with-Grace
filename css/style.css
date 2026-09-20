@@ -956,3 +956,69 @@ iframe {
 .gallery-grid img:hover{
     transform:scale(1.05);
 }
+/* ===== Modern Gallery ===== */
+
+.gallery-modal{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    inset:0;
+    background:rgba(0,0,0,.92);
+    justify-content:center;
+    align-items:center;
+}
+
+.gallery-modal img{
+    max-width:90%;
+    max-height:85%;
+    border-radius:12px;
+    box-shadow:0 0 35px rgba(0,0,0,.6);
+}
+
+.gallery-close{
+    position:absolute;
+    top:25px;
+    right:40px;
+    color:white;
+    font-size:50px;
+    cursor:pointer;
+}
+
+.gallery-prev,
+.gallery-next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:white;
+
+    font-size:60px;
+
+    cursor:pointer;
+
+    padding:20px;
+
+    user-select:none;
+
+}
+
+.gallery-prev{
+
+    left:20px;
+
+}
+
+.gallery-next{
+
+    right:20px;
+
+}
+
+.gallery-grid img{
+
+    cursor:pointer;
+
+}
