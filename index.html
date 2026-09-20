@@ -9,7 +9,7 @@
     <title>United In Grace Ministries</title>
 
     <link rel="stylesheet" href="css/style.css">
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 </head>
 
 <body>
@@ -731,19 +731,19 @@ Every Saturday at Hope Faith Homeless Assistance Campus • Kansas City, Missour
 
 <!-- Modern Gallery Lightbox -->
 
-<div id="galleryModal" class="gallery-modal">
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
-    <span class="gallery-close">&times;</span>
+<script>
+const lightbox = GLightbox({
+    selector: ".glightbox",
+    touchNavigation: true,
+    loop: true,
+    zoomable: true
+});
+</script>
 
-    <span class="gallery-prev">&#10094;</span>
-
-    <img id="galleryImage">
-
-    <span class="gallery-next">&#10095;</span>
-
-</div>
-
-<script src="script.js"></script>
+</body>
+</html>
     
 </body>
 </html>
