@@ -352,6 +352,53 @@ Every Saturday at Hope Faith Homeless Assistance Campus • Kansas City, Missour
     </div>
 
 </section>
+    <!-- ================= MINISTRY DASHBOARD ================= -->
+
+<section id="dashboard">
+
+    <div class="container">
+
+        <h2>❤️ Ministry Dashboard</h2>
+
+        <p class="section-text">
+            Every number represents a life touched through the love of Jesus Christ.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <span>👥</span>
+                <h3 id="totalGuests">0</h3>
+                <p>Guests Served</p>
+            </div>
+
+            <div class="card">
+                <span>📅</span>
+                <h3 id="weeksServed">0</h3>
+                <p>Weeks Served</p>
+            </div>
+
+            <div class="card">
+                <span>📈</span>
+                <h3 id="averageGuests">0</h3>
+                <p>Average Saturday</p>
+            </div>
+
+            <div class="card">
+                <span>🔥</span>
+                <h3 id="highestSaturday">0</h3>
+                <p>Highest Saturday</p>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <canvas id="attendanceChart"></canvas>
+
+    </div>
+
+</section>
 <!-- ================= PHOTO GALLERY ================= -->
 
 <section id="gallery" class="gallery">
@@ -738,19 +785,86 @@ Every Saturday at Hope Faith Homeless Assistance Campus • Kansas City, Missour
 
 <!-- ================= LIGHTBOX ================= -->
 
-<!-- ================= LIGHTBOXS ================= -->
-
-<!-- Modern Gallery Lightbox -->
-
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-const lightbox = GLightbox({
-    selector: ".glightbox",
-    touchNavigation: true,
-    loop: true,
-    zoomable: true
+
+const ministryData = [
+
+["1/3/2026",128],
+["1/10/2026",104],
+...
+["9/19/2026",107]
+
+];
+
+const labels = ministryData.map(d=>d[0]);
+const values = ministryData.map(d=>d[1]);
+
+const total = values.reduce((a,b)=>a+b,0);
+const weeks = values.length;
+const average = Math.round(total/weeks);
+const highest = Math.max(...values);
+
+document.getElementById("totalGuests").innerText =
+total.toLocaleString();
+
+document.getElementById("weeksServed").innerText =
+weeks;
+
+document.getElementById("averageGuests").innerText =
+average;
+
+document.getElementById("highestSaturday").innerText =
+highest;
+
+new Chart(document.getElementById("attendanceChart"),{
+
+type:"line",
+
+data:{
+
+labels:labels,
+
+datasets:[{
+
+label:"Guests Served",
+
+data:values,
+
+fill:true,
+
+tension:.35,
+
+borderWidth:4,
+
+borderColor:"#1C4F8A",
+
+backgroundColor:"rgba(28,79,138,.15)",
+
+pointBackgroundColor:"#D6B24A",
+
+pointRadius:5
+
+}]
+
+},
+
+options:{
+
+responsive:true,
+
+plugins:{
+legend:{
+display:false
+}
+}
+
+}
+
 });
+
 </script>
 
 </body>
