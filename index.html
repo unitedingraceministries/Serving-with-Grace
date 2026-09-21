@@ -762,56 +762,86 @@ const lightbox = GLightbox({
 
 <script>
 
+// Attendance data
 const ministryData = [
-
 ["1/3/2026",128],
 ["1/10/2026",104],
 ["1/17/2026",121],
-...
+["1/24/2026",80],
+["1/31/2026",144],
+["2/7/2026",119],
+["2/14/2026",138],
+["2/21/2026",131],
+["2/28/2026",117],
+["3/7/2026",80],
+["3/14/2026",89],
+["3/21/2026",79],
+["3/28/2026",80],
+["4/4/2026",64],
+["4/18/2026",78],
+["4/25/2026",78],
+["5/2/2026",84],
+["5/9/2026",69],
+["5/16/2026",98],
+["5/23/2026",103],
+["5/30/2026",84],
+["6/6/2026",69],
+["6/13/2026",98],
+["6/20/2026",103],
+["6/27/2026",89],
+["7/4/2026",57],
+["7/11/2026",84],
+["7/25/2026",109],
+["8/1/2026",83],
+["8/8/2026",84],
+["8/15/2026",80],
+["8/22/2026",96],
+["8/29/2026",84],
+["9/5/2026",100],
+["9/12/2026",91],
 ["9/19/2026",107]
-
 ];
 
-const labels = ministryData.map(d=>d[0]);
-const values = ministryData.map(d=>d[1]);
+// Graph data
+const labels = ministryData.map(item => item[0]);
+const values = ministryData.map(item => item[1]);
 
-const total = values.reduce((a,b)=>a+b,0);
-const weeks = values.length;
-const average = Math.round(total/weeks);
-const highest = Math.max(...values);
+// Dashboard numbers
+document.getElementById("totalGuests").innerText = "3,370";
+document.getElementById("weeksServed").innerText = "45";
+document.getElementById("averageGuests").innerText = "94";
+document.getElementById("highestSaturday").innerText = "144";
 
-document.getElementById("totalGuests").innerText = total.toLocaleString();
-document.getElementById("weeksServed").innerText = weeks;
-document.getElementById("averageGuests").innerText = average;
-document.getElementById("highestSaturday").innerText = highest;
-
-Chart(document.getElementById("attendanceChart"),{
-    type:"line",
-    data:{
-        labels:labels,
-        datasets:[{
-            label:"Guests Served",
-            data:values,
-            fill:true,
-            tension:.35,
-            borderWidth:4,
-            borderColor:"#1C4F8A",
-            backgroundColor:"rgba(28,79,138,.15)",
-            pointBackgroundColor:"#D6B24A",
-            pointRadius:5
+// Chart
+new Chart(document.getElementById("attendanceChart"), {
+    type: "line",
+    data: {
+        labels: labels,
+        datasets: [{
+            label: "Guests Served",
+            data: values,
+            fill: true,
+            tension: 0.35,
+            borderWidth: 4,
+            borderColor: "#1C4F8A",
+            backgroundColor: "rgba(28,79,138,.15)",
+            pointBackgroundColor: "#D6B24A",
+            pointRadius: 5
         }]
     },
-    options:{
-        responsive:true,
-        plugins:{
-            legend:{
-                display:false
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true
             }
         }
     }
 });
 
 </script>
-
-</body>
-</html>
