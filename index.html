@@ -817,110 +817,109 @@ document.getElementById("averageGuests").textContent = "94";
 document.getElementById("highestSaturday").textContent = "144";
 
 // ================= CHART =================
+// ================= CHART =================
 
 const ctx = document.getElementById("attendanceChart").getContext("2d");
 
 // Gold gradient
-const gradient = ctx.createLinearGradient(0,0,0,400);
-gradient.addColorStop(0,"rgba(214,178,74,.45)");
-gradient.addColorStop(.5,"rgba(214,178,74,.18)");
-gradient.addColorStop(1,"rgba(214,178,74,0)");
+const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+gradient.addColorStop(0, "rgba(214,178,74,.45)");
+gradient.addColorStop(.5, "rgba(214,178,74,.18)");
+gradient.addColorStop(1, "rgba(214,178,74,0)");
 
-new Chart(ctx,{
+new Chart(ctx, {
 
-    type:"line",
+    type: "line",
 
-    data:{
-        labels:labels,
+    data: {
+        labels: labels,
 
-        datasets:[{
+        datasets: [{
+            label: "Guests Served",
+            data: values,
 
-            label:"Guests Served",
+            fill: true,
 
-            data:values,
+            backgroundColor: gradient,
 
-            fill:true,
+            borderColor: "#1C4F8A",
 
-            backgroundColor:gradient,
+            borderWidth: 4,
 
-            borderColor:"#1C4F8A",
+            tension: 0.4,
 
-            borderWidth:4,
+            pointRadius: 6,
 
-            tension:.4,
+            pointHoverRadius: 14,
 
-            pointRadius:6,
+            hitRadius: 25,
 
-            pointHoverRadius:14,
+            hoverRadius: 14,
 
-            hitRadius:25,
+            pointBackgroundColor: "#D6B24A",
 
-            hoverRadius:14,
+            pointBorderColor: "#ffffff",
 
-            pointBackgroundColor:"#D6B24A",
+            pointBorderWidth: 2,
 
-            pointBorderColor:"#ffffff",
+            pointHoverBackgroundColor: "#FFD54F",
 
-            pointBorderWidth:2,
+            pointHoverBorderColor: "#1C4F8A",
 
-            pointHoverBackgroundColor:"#FFD54F",
-
-            pointHoverBorderColor:"#1C4F8A",
-
-            pointHoverBorderWidth:4
+            pointHoverBorderWidth: 4
 
         }]
     },
 
-    options:{
+    options: {
 
-        responsive:true,
+        responsive: true,
 
-        maintainAspectRatio:false,
+        maintainAspectRatio: false,
 
-        animation:{
-            duration:2200,
-            easing:"easeOutQuart"
+        animation: {
+            duration: 2200,
+            easing: "easeOutQuart"
         },
 
-        interaction:{
-            mode:"nearest",
-            intersect:false
+        interaction: {
+            mode: "nearest",
+            intersect: false
         },
 
-        plugins:{
+        plugins: {
 
-            legend:{
-                display:false
+            legend: {
+                display: false
             },
 
-            tooltip:{
+            tooltip: {
 
-                enabled:true,
+                enabled: true,
 
-                backgroundColor:"#1C4F8A",
+                backgroundColor: "#1C4F8A",
 
-                titleColor:"#ffffff",
+                titleColor: "#ffffff",
 
-                bodyColor:"#ffffff",
+                bodyColor: "#ffffff",
 
-                borderColor:"#D6B24A",
+                borderColor: "#D6B24A",
 
-                borderWidth:2,
+                borderWidth: 2,
 
-                padding:14,
+                padding: 14,
 
-                cornerRadius:12,
+                cornerRadius: 12,
 
-                displayColors:false,
+                displayColors: false,
 
-                callbacks:{
+                callbacks: {
 
-                    title:function(context){
+                    title: function(context) {
                         return "Saturday • " + context[0].label;
                     },
 
-                    label:function(context){
+                    label: function(context) {
                         return "👥 Guests Served: " + context.raw;
                     }
 
@@ -930,32 +929,32 @@ new Chart(ctx,{
 
         },
 
-        scales:{
+        scales: {
 
-            x:{
+            x: {
 
-                grid:{
-                    display:false
+                grid: {
+                    display: false
                 },
 
-                ticks:{
-                    color:"#666",
-                    maxTicksLimit:8
+                ticks: {
+                    color: "#666",
+                    maxTicksLimit: 8
                 }
 
             },
 
-            y:{
+            y: {
 
-                beginAtZero:true,
+                beginAtZero: true,
 
-                ticks:{
-                    stepSize:20,
-                    color:"#666"
+                ticks: {
+                    stepSize: 20,
+                    color: "#666"
                 },
 
-                grid:{
-                    color:"rgba(0,0,0,.06)"
+                grid: {
+                    color: "rgba(0,0,0,.06)"
                 }
 
             }
@@ -965,5 +964,3 @@ new Chart(ctx,{
     }
 
 });
-
-</script>
