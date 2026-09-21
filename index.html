@@ -765,7 +765,6 @@ const lightbox = GLightbox({
 
 // ================= ATTENDANCE DATA =================
 
-const ministryData = [
 ["1/3/2026",128],
 ["1/10/2026",104],
 ["1/17/2026",121],
@@ -804,11 +803,6 @@ const ministryData = [
 ["9/19/2026",107]
 ];
 
-// ================= GRAPH DATA =================
-
-const labels = ministryData.map(item => item[0]);
-const values = ministryData.map(item => item[1]);
-
 // ================= DASHBOARD NUMBERS =================
 
 document.getElementById("totalGuests").textContent = "3,370";
@@ -816,7 +810,6 @@ document.getElementById("weeksServed").textContent = "45";
 document.getElementById("averageGuests").textContent = "94";
 document.getElementById("highestSaturday").textContent = "144";
 
-// ================= CHART =================
 // ================= CHART =================
 
 const ctx = document.getElementById("attendanceChart").getContext("2d");
