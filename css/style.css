@@ -1028,3 +1028,67 @@ iframe {
     height:450px !important;
     margin:40px auto;
 }
+/* ================= STORIES ================= */
+
+#stories{
+    padding:80px 0;
+}
+
+.story-row{
+    display:flex;
+    align-items:center;
+    gap:60px;
+    margin:80px 0;
+}
+
+.story-row.reverse{
+    flex-direction:row-reverse;
+}
+
+.story-row img{
+    width:48%;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.story-text{
+    width:52%;
+}
+
+.story-text blockquote{
+    font-size:2rem;
+    font-style:italic;
+    color:#1C4F8A;
+    margin-bottom:20px;
+    line-height:1.4;
+}
+
+.story-text p{
+    font-size:1.1rem;
+    line-height:1.8;
+    color:#555;
+}
+
+@media(max-width:900px){
+
+.story-row,
+.story-row.reverse{
+
+    flex-direction:column;
+
+}
+
+.story-row img,
+.story-text{
+
+    width:100%;
+
+}
+
+.story-text{
+
+    text-align:center;
+
+}
+
+}
