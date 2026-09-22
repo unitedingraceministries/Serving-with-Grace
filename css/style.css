@@ -1028,67 +1028,96 @@ iframe {
     height:450px !important;
     margin:40px auto;
 }
-/* ================= STORIES ================= */
+<!-- ================= STORIES OF HOPE ================= -->
 
-#stories{
-    padding:80px 0;
-}
+<section id="stories">
 
-.story-row{
-    display:flex;
-    align-items:center;
-    gap:60px;
-    margin:80px 0;
-}
+<div class="container">
 
-.story-row.reverse{
-    flex-direction:row-reverse;
-}
+<h2>❤️ Stories of Hope</h2>
 
-.story-row img{
-    width:48%;
-    border-radius:18px;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
-}
+<p class="section-text">
+Behind every number is a person. Every Saturday we have the privilege of serving breakfast,
+sharing coffee, offering prayer, and reminding our neighbors that they are loved by God.
+Here are just a few moments that inspire us to keep serving.
+</p>
 
-.story-text{
-    width:52%;
-}
+<div class="story-row">
 
-.story-text blockquote{
-    font-size:2rem;
-    font-style:italic;
-    color:#1C4F8A;
-    margin-bottom:20px;
-    line-height:1.4;
-}
+    <img src="images/story1.jpg" alt="Serving Breakfast">
 
-.story-text p{
-    font-size:1.1rem;
-    line-height:1.8;
-    color:#555;
-}
+    <div class="story-text">
 
-@media(max-width:900px){
+        <blockquote>
+            "Thank you for remembering me."
+        </blockquote>
 
-.story-row,
-.story-row.reverse{
+        <p>
+            Sometimes the greatest gift isn't a hot breakfast—
+            it's knowing someone remembered your name.
+        </p>
 
-    flex-direction:column;
+    </div>
 
-}
+</div>
 
-.story-row img,
-.story-text{
+<div class="story-row reverse">
 
-    width:100%;
+    <img src="images/story2.jpg" alt="Praying With Guests">
 
-}
+    <div class="story-text">
 
-.story-text{
+        <blockquote>
+            "Can you pray for me today?"
+        </blockquote>
 
-    text-align:center;
+        <p>
+            Every Saturday we are honored to pray with anyone who asks,
+            sharing hope through the love of Jesus Christ.
+        </p>
 
-}
+    </div>
 
-}
+</div>
+
+<div class="story-row">
+
+    <img src="images/story3.jpg" alt="Community Fellowship">
+
+    <div class="story-text">
+
+        <blockquote>
+            "This breakfast means everything."
+        </blockquote>
+
+        <p>
+            A warm meal opens the door to meaningful conversations,
+            encouragement, and genuine friendship.
+        </p>
+
+    </div>
+
+</div>
+
+<div class="story-row reverse">
+
+    <img src="images/story4.jpg" alt="United In Grace Ministries">
+
+    <div class="story-text">
+
+        <blockquote>
+            "God bless every one of you."
+        </blockquote>
+
+        <p>
+            Moments like these remind us why we faithfully return every
+            Saturday to serve our community.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
