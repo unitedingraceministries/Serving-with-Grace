@@ -731,192 +731,188 @@ const lightbox = GLightbox({
 
 // ================= GOOGLE SHEET =================
 
-const CSV_URL =
-"https://docs.google.com/spreadsheets/d/e/2PACX-1vQy5VQJdomj5WYuHd153ard3C-F-NTQMZHLajAg6FOJt6whpP14kFIxS9H2_Fr_rxySDigivlRTOJjW/pub?output=csv";
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQy5VQJdomj5WYuHd153ard3C-F-NTQMZHLajAg6FOJt6whpP14kFIxS9H2_Fr_rxySDigivlRTOJjW/pub?output=csv";
 
 fetch(CSV_URL)
 .then(response => response.text())
 .then(csv => {
 
-    const rows = csv.trim().split("\n").slice(1);
+    // Read CSV and ignore blank rows
+    const ministryData = csv
+        .trim()
+        .split("\n")
+        .slice(1)
+        .map(row => row.split(","))
+        .filter(row => row.length >= 2 && row[0] && !isNaN(Number(row[1])))
+        .map(row => ({
+            date: row[0].trim(),
+            guests: Number(row[1])
+        }));
 
-    const ministryData = rows.map(row => {
+    const labels = ministryData.map(item => item.date);
+    const values = ministryData.map(item => item.guests);
 
-        const cols = row.split(",");
-
-        return [cols[0], Number(cols[1])];
-
-    });
-
-    window.labels = ministryData.map(item => item[0]);
-    window.values = ministryData.map(item => item[1]);
-
-    const total = values.reduce((a,b)=>a+b,0);
+    // Dashboard Numbers
+    const total = values.reduce((sum, value) => sum + value, 0);
     const weeks = values.length;
-    const average = Math.round(total/weeks);
+    const average = weeks ? Math.round(total / weeks) : 0;
     const highest = Math.max(...values);
 
-    document.getElementById("totalGuests").textContent =
-        total.toLocaleString();
+    document.getElementById("totalGuests").textContent = total.toLocaleString();
+    document.getElementById("weeksServed").textContent = weeks;
+    document.getElementById("averageGuests").textContent = average;
+    document.getElementById("highestSaturday").textContent = highest;
 
-    document.getElementById("weeksServed").textContent =
-        weeks;
+    // Draw Chart
+    buildChart(labels, values);
 
-    document.getElementById("averageGuests").textContent =
-        average;
-
-    document.getElementById("highestSaturday").textContent =
-        highest;
-
-    buildChart();
-
+})
+.catch(error => {
+    console.error("Error loading Google Sheet:", error);
 });
 
 // ================= CHART =================
-function buildChart(){
-const ctx = document.getElementById("attendanceChart").getContext("2d");
 
-// Gold gradient
-const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-gradient.addColorStop(0, "rgba(214,178,74,.45)");
-gradient.addColorStop(.5, "rgba(214,178,74,.18)");
-gradient.addColorStop(1, "rgba(214,178,74,0)");
+function buildChart(labels, values){
 
-new Chart(ctx, {
+    const ctx = document.getElementById("attendanceChart").getContext("2d");
 
-    type: "line",
+    const gradient = ctx.createLinearGradient(0,0,0,400);
+    gradient.addColorStop(0,"rgba(214,178,74,.45)");
+    gradient.addColorStop(.5,"rgba(214,178,74,.18)");
+    gradient.addColorStop(1,"rgba(214,178,74,0)");
 
-    data: {
-        labels: labels,
+    new Chart(ctx,{
 
-        datasets: [{
-            label: "Guests Served",
-            data: values,
+        type:"line",
 
-            fill: true,
+        data:{
+            labels:labels,
 
-            backgroundColor: gradient,
+            datasets:[{
 
-            borderColor: "#1C4F8A",
+                label:"Guests Served",
 
-            borderWidth: 4,
+                data:values,
 
-            tension: 0.4,
+                fill:true,
 
-            pointRadius: 6,
+                backgroundColor:gradient,
 
-            pointHoverRadius: 14,
+                borderColor:"#1C4F8A",
 
-            hitRadius: 25,
+                borderWidth:4,
 
-            hoverRadius: 14,
+                tension:.4,
 
-            pointBackgroundColor: "#D6B24A",
+                pointRadius:6,
 
-            pointBorderColor: "#ffffff",
+                pointHoverRadius:14,
 
-            pointBorderWidth: 2,
+                hitRadius:25,
 
-            pointHoverBackgroundColor: "#FFD54F",
+                hoverRadius:14,
 
-            pointHoverBorderColor: "#1C4F8A",
+                pointBackgroundColor:"#D6B24A",
 
-            pointHoverBorderWidth: 4
+                pointBorderColor:"#ffffff",
 
-        }]
-    },
+                pointBorderWidth:2,
 
-    options: {
+                pointHoverBackgroundColor:"#FFD54F",
 
-        responsive: true,
+                pointHoverBorderColor:"#1C4F8A",
 
-        maintainAspectRatio: false,
+                pointHoverBorderWidth:4
 
-        animation: {
-            duration: 2200,
-            easing: "easeOutQuart"
+            }]
         },
 
-        interaction: {
-            mode: "nearest",
-            intersect: false
-        },
+        options:{
 
-        plugins: {
+            responsive:true,
 
-            legend: {
-                display: false
+            maintainAspectRatio:false,
+
+            animation:{
+                duration:2200,
+                easing:"easeOutQuart"
             },
 
-            tooltip: {
+            interaction:{
+                mode:"nearest",
+                intersect:false
+            },
 
-                enabled: true,
+            plugins:{
 
-                backgroundColor: "#1C4F8A",
+                legend:{
+                    display:false
+                },
 
-                titleColor: "#ffffff",
+                tooltip:{
 
-                bodyColor: "#ffffff",
+                    backgroundColor:"#1C4F8A",
 
-                borderColor: "#D6B24A",
+                    titleColor:"#ffffff",
 
-                borderWidth: 2,
+                    bodyColor:"#ffffff",
 
-                padding: 14,
+                    borderColor:"#D6B24A",
 
-                cornerRadius: 12,
+                    borderWidth:2,
 
-                displayColors: false,
+                    padding:14,
 
-                callbacks: {
+                    cornerRadius:12,
 
-                    title: function(context) {
-                        return "Saturday • " + context[0].label;
-                    },
+                    displayColors:false,
 
-                    label: function(context) {
-                        return "👥 Guests Served: " + context.raw;
+                    callbacks:{
+
+                        title:function(context){
+                            return "Saturday • " + context[0].label;
+                        },
+
+                        label:function(context){
+                            return "👥 Guests Served: " + context.raw;
+                        }
+
                     }
 
                 }
 
-            }
-
-        },
-
-        scales: {
-
-            x: {
-
-                grid: {
-                    display: false
-                },
-
-                ticks: {
-                    color: "#666",
-                    maxTicksLimit: 8
-                }
-
             },
 
-            y: {
+            scales:{
 
-                beginAtZero: true,
-
-                ticks: {
-                    stepSize: 20,
-                    color: "#666"
+                x:{
+                    grid:{
+                        display:false
+                    },
+                    ticks:{
+                        color:"#666",
+                        maxTicksLimit:8
+                    }
                 },
 
-                grid: {
-                    color: "rgba(0,0,0,.06)"
+                y:{
+                    beginAtZero:true,
+                    ticks:{
+                        stepSize:20,
+                        color:"#666"
+                    },
+                    grid:{
+                        color:"rgba(0,0,0,.06)"
+                    }
                 }
 
             }
 
         }
 
-    }
+    });
 
-});
 }
+
+</script>
