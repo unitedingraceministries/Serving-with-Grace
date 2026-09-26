@@ -773,7 +773,7 @@ fetch(CSV_URL)
 });
 
 // ================= CHART =================
-
+function buildChart(){
 const ctx = document.getElementById("attendanceChart").getContext("2d");
 
 // Gold gradient
@@ -919,3 +919,4 @@ new Chart(ctx, {
     }
 
 });
+}
