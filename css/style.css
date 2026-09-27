@@ -642,16 +642,15 @@ footer hr{
 
     }
 
-    .gallery-grid{
+  .polaroid-gallery{
+    grid-template-columns:1fr;
+}
 
-        grid-template-columns:1fr;
+.polaroid{
+    width:90%;
+    max-width:300px;
+}
 
-    }
-
-    .gallery-grid img{
-
-        height:220px;
-
-    }
-
+.polaroid img{
+    height:260px;
 }
