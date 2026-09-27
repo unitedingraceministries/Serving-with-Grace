@@ -235,48 +235,53 @@ section{
     line-height:1.7;
 }
 }
-/* ================= HEADER ================= */
+}/* ==========================================
+   HEADER
+========================================== */
 
 header{
-    background: linear-gradient(135deg,#7A1E2C,#1C4F8A);
+    background:linear-gradient(135deg,#7A1E2C,#1C4F8A);
     color:#fff;
     text-align:center;
-    padding:45px 20px;
-    box-shadow:0 12px 30px rgba(0,0,0,.15);
+    padding:50px 20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
 }
 
 header h1{
-    color:#fff;
-    margin-top:18px;
+    color:#ffffff;
+    font-size:3rem;
+    margin:20px 0 10px;
 }
 
-.tagline{
-    color:#f3f3f3;
-    font-size:1.15rem;
-    margin:12px 0 30px;
+header .tagline{
+    color:#f5f5f5;
+    font-size:1.2rem;
+    margin-bottom:30px;
 }
 
 .logo{
     width:170px;
     margin:auto;
+    display:block;
     border-radius:50%;
     border:6px solid #fff;
-    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    box-shadow:0 10px 30px rgba(0,0,0,.30);
 }
 
 nav{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:12px;
-    margin-top:15px;
+    gap:14px;
+    margin-top:20px;
 }
 
 nav a{
-    color:#fff;
+    color:#ffffff;
     font-weight:700;
-    padding:12px 18px;
+    padding:12px 20px;
     border-radius:40px;
+    transition:.3s;
 }
 
 nav a:hover{
