@@ -612,61 +612,74 @@
     </div>
 
 </section>
-<!-- ================= PHOTO GALLERY ================= -->
+/* ==========================================
+   POLAROID GALLERY
+========================================== */
 
-<section id="gallery" class="gallery">
+.gallery{
+    background:#f6f4ef;
+}
 
-    <div class="container">
+.polaroid-gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:28px;
+    margin-top:50px;
+    padding:10px;
+}
 
-        <h2>📸 Moments From Our Ministry</h2>
+.polaroid{
+    background:#fff;
+    padding:12px 12px 55px;
+    width:260px;
+    border-radius:4px;
+    box-shadow:0 12px 28px rgba(0,0,0,.18);
+    transition:.35s ease;
+    position:relative;
+    display:block;
+}
 
-        <p class="section-text">
-            Every Saturday we witness lives being touched through prayer,
-            fellowship, warm meals, and the love of Jesus Christ.
-            Every photo tells part of the story God is writing through United In Grace Ministries.
-        </p>
+/* Different rotations */
 
-        <div class="polaroid-gallery">
+.polaroid:nth-child(6n+1){
+    transform:rotate(-5deg);
+}
 
-            <a href="images/IMG_0332.jpeg" class="glightbox polaroid"><img src="images/IMG_0332.jpeg" alt="Serving breakfast"></a>
-            <a href="images/IMG_0336.jpeg" class="glightbox polaroid"><img src="images/IMG_0336.jpeg" alt=""></a>
-            <a href="images/IMG_5502.jpeg" class="glightbox polaroid"><img src="images/IMG_5502.jpeg" alt=""></a>
-            <a href="images/IMG_6590.jpeg" class="glightbox polaroid"><img src="images/IMG_6590.jpeg" alt=""></a>
-            <a href="images/IMG_6598.jpeg" class="glightbox polaroid"><img src="images/IMG_6598.jpeg" alt=""></a>
-            <a href="images/IMG_7099.jpeg" class="glightbox polaroid"><img src="images/IMG_7099.jpeg" alt=""></a>
+.polaroid:nth-child(6n+2){
+    transform:rotate(3deg);
+}
 
-            <a href="images/IMG_7990.jpeg" class="glightbox polaroid"><img src="images/IMG_7990.jpeg" alt=""></a>
-            <a href="images/IMG_7991.jpeg" class="glightbox polaroid"><img src="images/IMG_7991.jpeg" alt=""></a>
-            <a href="images/IMG_8006.jpeg" class="glightbox polaroid"><img src="images/IMG_8006.jpeg" alt=""></a>
+.polaroid:nth-child(6n+3){
+    transform:rotate(-2deg);
+}
 
-            <a href="images/IMG_8473.jpeg" class="glightbox polaroid"><img src="images/IMG_8473.jpeg" alt=""></a>
-            <a href="images/IMG_9222.jpeg" class="glightbox polaroid"><img src="images/IMG_9222.jpeg" alt=""></a>
-            <a href="images/IMG_9828.jpeg" class="glightbox polaroid"><img src="images/IMG_9828.jpeg" alt=""></a>
+.polaroid:nth-child(6n+4){
+    transform:rotate(5deg);
+}
 
-            <a href="images/628038796117687453.jpeg" class="glightbox polaroid"><img src="images/628038796117687453.jpeg" alt=""></a>
-            <a href="images/7708198318347386552.jpeg" class="glightbox polaroid"><img src="images/7708198318347386552.jpeg" alt=""></a>
+.polaroid:nth-child(6n+5){
+    transform:rotate(-4deg);
+}
 
-            <a href="images/IMG_0337.jpeg" class="glightbox polaroid"><img src="images/IMG_0337.jpeg" alt=""></a>
-            <a href="images/IMG_3674.jpeg" class="glightbox polaroid"><img src="images/IMG_3674.jpeg" alt=""></a>
-            <a href="images/IMG_4711.jpeg" class="glightbox polaroid"><img src="images/IMG_4711.jpeg" alt=""></a>
-            <a href="images/IMG_4855.jpeg" class="glightbox polaroid"><img src="images/IMG_4855.jpeg" alt=""></a>
-            <a href="images/IMG_4860.jpeg" class="glightbox polaroid"><img src="images/IMG_4860.jpeg" alt=""></a>
+.polaroid:nth-child(6n){
+    transform:rotate(2deg);
+}
 
-            <a href="images/IMG_6724.jpeg" class="glightbox polaroid"><img src="images/IMG_6724.jpeg" alt=""></a>
-            <a href="images/IMG_6733.jpeg" class="glightbox polaroid"><img src="images/IMG_6733.jpeg" alt=""></a>
-            <a href="images/IMG_6741.jpeg" class="glightbox polaroid"><img src="images/IMG_6741.jpeg" alt=""></a>
+.polaroid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    display:block;
+}
 
-            <a href="images/IMG_7734.jpeg" class="glightbox polaroid"><img src="images/IMG_7734.jpeg" alt=""></a>
-            <a href="images/IMG_7735.jpeg" class="glightbox polaroid"><img src="images/IMG_7735.jpeg" alt=""></a>
+/* Hover */
 
-            <a href="images/IMG_8164.jpeg" class="glightbox polaroid"><img src="images/IMG_8164.jpeg" alt=""></a>
-            <a href="images/IMG_9985.jpeg" class="glightbox polaroid"><img src="images/IMG_9985.jpeg" alt=""></a>
-
-        </div>
-
-    </div>
-
-</section>
+.polaroid:hover{
+    transform:scale(1.08) rotate(0deg);
+    z-index:50;
+    box-shadow:0 24px 45px rgba(0,0,0,.35);
+}
 <!-- ================= SCRIPTURE ================= -->
 
 <section class="scripture">
