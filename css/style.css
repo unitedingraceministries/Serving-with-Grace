@@ -396,16 +396,11 @@ nav a:hover{
 
 }
 
-.hero-image{
-    background:#fff;
-    text-align:center;
-    padding:0;
-}
-
 .hero-image img{
     width:100%;
-    height:auto;
-    display:block;
+    height:850px;
+    object-fit:cover;
+    object-position:center 8%;
 }
 
 /* ==========================================
