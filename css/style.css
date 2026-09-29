@@ -398,9 +398,9 @@ nav a:hover{
 
 .hero-image img{
     width:100%;
-    max-height:650px;
+    height:700px;          /* Try 700–750px */
     object-fit:cover;
-   object-position:center 20%;
+    object-position:center top;
 }
 
 /* ==========================================
