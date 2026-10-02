@@ -89,7 +89,18 @@ a{
 /* ==========================================
    GET INVOLVED
 ========================================== */
+#get-involved{
+    text-align:center;
+}
 
+#get-involved h2{
+    margin-bottom:15px;
+}
+
+#get-involved .section-text{
+    max-width:700px;
+    margin:0 auto 45px;
+} 
 .involved-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
