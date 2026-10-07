@@ -745,3 +745,26 @@ footer hr{
 .polaroid img{
     height:260px;
 }
+/* ==========================================
+   PARTNER SECTION
+========================================== */
+
+#grace-partners{
+    background:linear-gradient(135deg,var(--blue),var(--burgundy));
+    color:#fff;
+}
+
+#grace-partners h2{
+    color:#fff;
+}
+
+#grace-partners .section-text{
+    color:#f3f3f3;
+}
+   #grace-partners .card{
+    background:#ffffff;
+}
+   #grace-partners .button{
+    font-size:1.1rem;
+    padding:18px 42px;
+}
