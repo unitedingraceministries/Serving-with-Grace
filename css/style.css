@@ -672,78 +672,71 @@ footer hr{
 @media (max-width:768px){
 
     header{
-
         padding:30px 15px;
-
     }
 
     .logo{
-
         width:120px;
-
     }
 
     h1{
-
         font-size:2rem;
-
     }
 
     h2{
-
         font-size:1.9rem;
-
     }
 
     nav{
-
         flex-direction:column;
-
     }
 
     nav a{
-
         width:100%;
-
         text-align:center;
-
-    }
-
-    .hero-image img{
-
-        height:280px;
-
     }
 
     .intro{
-
         padding:60px 20px;
-
     }
 
     .intro h2{
-
         font-size:2rem;
-
     }
 
     .cards{
-
         grid-template-columns:1fr;
-
     }
 
-  .polaroid-gallery{
-    grid-template-columns:1fr;
-}
+    /* ===== Hanging Polaroids ===== */
 
-.polaroid{
-    width:90%;
-    max-width:300px;
-}
+    .polaroid-strip{
+        gap:10px;
+        overflow-x:auto;
+        justify-content:flex-start;
+        padding:20px 10px 40px;
+        scrollbar-width:none;
+    }
 
-.polaroid img{
-    height:260px;
+    .polaroid-strip::-webkit-scrollbar{
+        display:none;
+    }
+
+    .polaroid{
+        width:90px;
+        padding:6px 6px 18px;
+    }
+
+    .polaroid img{
+        width:100%;
+        height:82px;
+        object-fit:cover;
+    }
+
+    .rope{
+        width:95%;
+    }
+
 }
 /* ==========================================
    PARTNER SECTION
